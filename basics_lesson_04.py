@@ -18,7 +18,7 @@ blend_blue = Image.blend(right_blue, middle_blue, 0.5)
 coordinates_middle_green = (25, 0, 671, green.height)
 middle_green = green.crop(coordinates_middle_green)
 
-blend_image = Image.merge("RGB", (blend_red, blend_blue, middle_green))
+blend_image = Image.merge("RGB", (blend_red, middle_green, blend_blue))
 blend_image.save("blend_image.jpg")
 
 blend_image.thumbnail((80, 80))
